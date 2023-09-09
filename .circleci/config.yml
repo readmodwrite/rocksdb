@@ -806,7 +806,7 @@ jobs:
 
   benchmark-linux: #use a private Circle CI runner (resource_class) to run the job
     machine: true
-    resource_class: facebook/rocksdb-benchmark-sys1
+    resource_class: readmodwrite/perf
     steps:
       - build-for-benchmarks
       - perform-benchmarks
