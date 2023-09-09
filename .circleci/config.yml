@@ -208,6 +208,12 @@ executors:
       - image: zjay437/rocksdb:0.6
 
 jobs:
+  runner-test:
+    machine: true
+    resource_class: readmodwrite/perf
+    steps:
+      - run: echo "Hi I'm on Runners!"
+
   build-macos:
     macos:
       xcode: 14.3.1
