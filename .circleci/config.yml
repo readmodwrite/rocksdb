@@ -814,6 +814,10 @@ jobs:
 
 workflows:
   version: 2
+  build-workflow:
+    jobs:
+      - runner-test
+
   jobs-linux-run-tests:
     jobs:
       - build-linux
