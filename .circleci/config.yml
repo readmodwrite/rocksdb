@@ -876,24 +876,24 @@ workflows:
   build-fuzzers:
     jobs:
       - build-fuzzers
-  benchmark-linux:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - benchmark-linux
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 9 * * *"
-          filters:
-            branches:
-              only:
-                - main
+  #benchmark-linux:
+  # triggers:
+  #   - schedule:
+  #       cron: "0 * * * *"
+  #       filters:
+  #         branches:
+  #           only:
+  #             - main
+  # jobs:
+  #   - benchmark-linux
+  #nightly:
+  # triggers:
+  #   - schedule:
+  #       cron: "0 9 * * *"
+  #       filters:
+  #         branches:
+  #           only:
+  #             - main
     jobs:
       - build-format-compatible
       - build-linux-arm-test-full
